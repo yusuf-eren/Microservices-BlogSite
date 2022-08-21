@@ -34,6 +34,20 @@ app.post("/posts", async (req, res) => {
   res.status(201).send(posts[id]);
 });
 
+
+// MY CHALLENGE FOR IMPROVING MYSELF
+// app.post("/delete_post", async (req, res) => {
+//   const { id } = req.body;
+//   await axios.post("http://localhost:4005/events", {
+//     type: "PostDeleted",
+//     data: {
+//       id
+//     }
+//   })
+
+//   res.status(200).send(posts[id])
+// });
+
 app.post("/events", (req, res) => {
   console.log("Received Event:", req.body.type);
 

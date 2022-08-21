@@ -9,7 +9,7 @@ app.use(cors());
 const posts = {};
 
 app.get("/posts", (req, res) => {
-    res.send(posts)
+  res.send(posts);
 });
 
 app.post("/events", (req, res) => {
@@ -23,8 +23,13 @@ app.post("/events", (req, res) => {
     const post = posts[postId];
     post.comments.push({ id, content });
   }
+  // MY CHALLENGE TO IMPROVE MYSELF
+  // if( type === "PostDeleted") {
+  //   const { id } = data;
+  //   delete posts[id];
+  // }
 
-  console.log(posts)
+  console.log(posts);
 
   res.send({});
 });
