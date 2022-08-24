@@ -34,7 +34,6 @@ app.post("/posts", async (req, res) => {
   res.status(201).send(posts[id]);
 });
 
-
 // MY CHALLENGE FOR IMPROVING MYSELF
 // app.post("/delete_post", async (req, res) => {
 //   const { id } = req.body;
@@ -55,5 +54,6 @@ app.post("/events", (req, res) => {
 });
 
 app.listen(4000, () => {
+  console.log("v55");
   console.log("http://localhost:4000 Posts");
 });
